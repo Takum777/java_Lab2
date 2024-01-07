@@ -1,15 +1,18 @@
 package org.example;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Enter your word: ");
+        Scanner word = new Scanner(System.in);
+        String str = word.nextLine();
 
-        String encodedWord = "H2ll4 w4rld!";
-        System.out.println("Encoded word: " + encodedWord);
-        System.out.println("Decoded word: " + Decoder.decodeVowels(encodedWord));
-
-        String consonantWord = "gekko voqkc!";
-        String replacedWord = Decoder.decodeConsonant(consonantWord);
-        System.out.println("Original word: " + consonantWord);
-        System.out.println("Word with consonants replaced: " + replacedWord);
+        if (Palindrome.Palind(str)) {
+            System.out.println("It's a palindrome!");
+        }
+        else {
+            System.out.println("It's not a palindrome!");
+        }
     }
+
 }
